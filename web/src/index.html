@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <script>FontAwesomeConfig = {autoReplaceSvg: "nest"}</script>
+        <title>IOT app</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+        </nav>
+
+        <!-- Crear cajas parte superior -->
+        <div class="container-fluid">
+            <div class="d-grid gap-2">
+                <button id="btn-ocultar-cards" class="btn btn btn-outline-secondary btn-sm" type="button"><i id="fas-one"class="fas fa-caret-up fa-1x"></i></button>
+            </div>
+            <div class="cards-data">
+                <div class="row">
+                    <!-- Granja -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-warning shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div id="card-granja" class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                        Finca</div>
+                                        <div class="h5 mb-0 font-weight-bold text-gray-800">San Jorge</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-tractor fa-3x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Temperatura -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-primary shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div  class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                            Temperatura ambiente</div>
+                                        <div id="card-temperatura" class="h5 mb-0 font-weight-bold text-gray-800">---°C</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-sun fa-3x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fecha -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-success shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div  class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                            Fecha</div>
+                                        <div id="card-fecha" class="h5 mb-0 font-weight-bold text-gray-800">---</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-calendar fa-3x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Ciudad -->
+                    <div class="col-xl-3 col-md-6 mb-4">
+                        <div class="card border-left-info shadow h-100 py-2">
+                            <div class="card-body">
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col mr-2">
+                                        <div  class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                            Ubicación</div>
+                                        <div id="card-ciudad" class="h5 mb-0 font-weight-bold text-gray-800">---</div>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fas fa-building-user fa-3x text-gray-300"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+        
+        <script src="./login.js"></script>
+        <script src="./index.js"></script>
+    </body>
+</html>

@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.js"],"names":["console","log"],"mappings":";AAAAA,QAAQC,IAAI","file":"src.ce0cb207.js","sourceRoot":"..\\src","sourcesContent":["console.log('Hola parcel')"]}

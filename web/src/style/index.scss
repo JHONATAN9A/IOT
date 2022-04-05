@@ -1,0 +1,22 @@
+.container-fluid{
+    margin-top: 0px;
+    
+}
+
+#btn-ocultar-cards{
+    border-color: #dddfeb;
+    margin-left: 40%;
+    margin-bottom: 10px;
+    height:25px;
+    width: 20%;
+    
+}
+
+.swal2-container.swal2-backdrop-show, 
+.swal2-container.swal2-noanimation{
+    //background-color: #1d335f !important;
+    
+    background-size: cover !important;
+    background-image: url(https://images.pexels.com/photos/162164/chicks-chicken-small-poultry-162164.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1000) !important;
+    
+}
