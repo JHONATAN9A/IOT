@@ -8,9 +8,13 @@ export let ApiTemperatura =(lat,long,div)=>{
     
     fetch('https://login.meteomatics.com/api/v1/token', {
         method: 'GET', 
-        headers: headers,
-        mode: 'cors',
-        credentials: 'include'
+        headers: new Headers({
+            'Authorization':'Basic ' + btoa(username + ":" + password),
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
+        }),
+        credentials: "include"
+
     })
     .then(response => response.json())
     .then(token => {

@@ -13926,9 +13926,12 @@ headers.set('Authorization', 'Basic ' + btoa(username + ":" + password));
 var ApiTemperatura = function ApiTemperatura(lat, long, div) {
   fetch('https://login.meteomatics.com/api/v1/token', {
     method: 'GET',
-    headers: headers,
-    mode: 'cors',
-    credentials: 'include'
+    headers: new Headers({
+      'Authorization': 'Basic ' + btoa(username + ":" + password),
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*'
+    }),
+    credentials: "include"
   }).then(function (response) {
     return response.json();
   }).then(function (token) {
@@ -25127,7 +25130,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50957" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56129" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
