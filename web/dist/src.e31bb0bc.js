@@ -13893,7 +13893,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"tools/location.js":[function(require,module,exports) {
+},{"./..\\img\\img_login.jpg":[["img_login.2a9d14c4.jpg","img/img_login.jpg"],"img/img_login.jpg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"tools/location.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -13926,13 +13926,18 @@ headers.set('Authorization', 'Basic ' + btoa(username + ":" + password));
 var ApiTemperatura = function ApiTemperatura(lat, long, div) {
   fetch('https://login.meteomatics.com/api/v1/token', {
     method: 'GET',
-    headers: headers
+    headers: headers,
+    mode: 'cors',
+    credentials: 'include'
   }).then(function (response) {
     return response.json();
   }).then(function (token) {
     var token_api = token.access_token;
     var API_URL = 'https://api.meteomatics.com/now/t_2m:C/' + lat + ',' + long + '/json?access_token=' + token_api;
-    fetch(API_URL).then(function (response) {
+    fetch(API_URL, {
+      mode: 'cors',
+      credentials: 'include'
+    }).then(function (response) {
       return response.json();
     }).then(function (temperatura) {
       if (temperatura.status == "OK") {
@@ -25122,7 +25127,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50109" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50957" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

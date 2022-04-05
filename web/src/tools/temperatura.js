@@ -7,13 +7,16 @@ headers.set('Authorization', 'Basic ' + btoa(username + ":" + password));
 export let ApiTemperatura =(lat,long,div)=>{
     
     fetch('https://login.meteomatics.com/api/v1/token', {
-        method: 'GET', headers: headers
+        method: 'GET', 
+        headers: headers,
+        mode: 'cors',
+        credentials: 'include'
     })
     .then(response => response.json())
     .then(token => {
         let token_api = token.access_token;
         let API_URL = 'https://api.meteomatics.com/now/t_2m:C/'+lat+','+long+'/json?access_token='+token_api
-        fetch(API_URL)
+        fetch(API_URL,{mode: 'cors',credentials: 'include'})
         .then(response => response.json())
         .then(temperatura => {
             if(temperatura.status == "OK"){
