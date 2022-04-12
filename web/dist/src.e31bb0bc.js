@@ -13918,38 +13918,51 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.ApiTemperatura = void 0;
-var username = 'universidaddecundinamarca_calderonrodriguez';
-var password = '9U1eG1eIyV';
-var headers = new Headers();
-headers.set('Authorization', 'Basic ' + btoa(username + ":" + password));
+var API_KEY = "f46f03acb27b3baa4049079f073d975a";
 
 var ApiTemperatura = function ApiTemperatura(lat, long, div) {
-  fetch('https://login.meteomatics.com/api/v1/token', {
-    method: 'GET',
-    headers: new Headers({
-      'Authorization': 'Basic ' + btoa(username + ":" + password),
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*'
-    }),
-    credentials: "include"
-  }).then(function (response) {
+  fetch("https://api.openweathermap.org/data/2.5/weather?lat=".concat(lat, "&lon=").concat(long, "&appid=").concat(API_KEY, "&units=metric")).then(function (response) {
     return response.json();
-  }).then(function (token) {
-    var token_api = token.access_token;
-    var API_URL = 'https://api.meteomatics.com/now/t_2m:C/' + lat + ',' + long + '/json?access_token=' + token_api;
-    fetch(API_URL, {
-      mode: 'cors',
-      credentials: 'include'
-    }).then(function (response) {
-      return response.json();
-    }).then(function (temperatura) {
-      if (temperatura.status == "OK") {
-        var value = temperatura.data[0].coordinates[0].dates[0].value;
-        div.innerHTML = value + "°C";
-      }
-    });
+  }).then(function (temperatura) {
+    try {
+      var data = temperatura.main.temp;
+      div.innerHTML = data + "°C";
+    } catch (_unused) {
+      div.innerHTML = "---" + "°C";
+    }
   });
 };
+/* let username= 'universidaddecundinamarca_calderonrodriguez'
+let password= '9U1eG1eIyV'
+
+
+export let ApiTemperatura =(lat,long,div)=>{
+    
+    fetch('https://login.meteomatics.com/api/v1/token', {
+        method: 'GET', 
+        headers: new Headers({
+            'Authorization':'Basic ' + btoa(username + ":" + password),
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
+        }),
+        credentials: "include"
+
+    })
+    .then(response => response.json())
+    .then(token => {
+        let token_api = token.access_token;
+        let API_URL = 'https://api.meteomatics.com/now/t_2m:C/'+lat+','+long+'/json?access_token='+token_api
+        fetch(API_URL,{mode: 'cors',credentials: 'include'})
+        .then(response => response.json())
+        .then(temperatura => {
+            if(temperatura.status == "OK"){
+                let value = temperatura.data[0].coordinates[0].dates[0].value;
+                div.innerHTML = value + "°C";
+            }
+        });
+    });
+}; */
+
 
 exports.ApiTemperatura = ApiTemperatura;
 },{}],"tools/dataCards.js":[function(require,module,exports) {
@@ -13971,7 +13984,6 @@ function updateCards(data) {
   var cardfecha = document.getElementById("card-fecha");
   cardfecha.innerHTML = fecha; //Añadir la temperatura
 
-  console.log(data);
   var temCard = document.getElementById("card-temperatura");
   (0, _temperatura.ApiTemperatura)(data.latitude, data.longitude, temCard);
   setInterval(function () {
@@ -25130,7 +25142,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56129" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55603" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -1,7 +1,35 @@
-let username= 'universidaddecundinamarca_calderonrodriguez'
+let API_KEY = "f46f03acb27b3baa4049079f073d975a"
+
+
+export let ApiTemperatura =(lat,long,div)=>{
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${API_KEY}&units=metric`)
+    .then(response => response.json())
+    .then(temperatura => {
+            try{
+                let data = temperatura.main.temp;
+                div.innerHTML = data + "°C";
+            }
+            catch{
+                div.innerHTML = "---" + "°C"; 
+            }
+            
+            
+    });
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/* let username= 'universidaddecundinamarca_calderonrodriguez'
 let password= '9U1eG1eIyV'
-let headers = new Headers();
-headers.set('Authorization', 'Basic ' + btoa(username + ":" + password));
 
 
 export let ApiTemperatura =(lat,long,div)=>{
@@ -29,4 +57,4 @@ export let ApiTemperatura =(lat,long,div)=>{
             }
         });
     });
-};
+}; */

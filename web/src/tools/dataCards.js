@@ -17,7 +17,7 @@ function updateCards(data){
     cardfecha.innerHTML = fecha;
 
     //Añadir la temperatura
-    console.log(data)
+    
     let temCard = document.getElementById("card-temperatura");
     ApiTemperatura(data.latitude,data.longitude,temCard);
     setInterval(function(){ApiTemperatura(data.latitude,data.longitude,temCard)}, 3600000);
