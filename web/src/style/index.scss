@@ -11,6 +11,15 @@
     width: 20%;
     
 }
+.icono-principal{
+    margin-left: 46%;
+}
+
+@media (max-width: 700px) {
+    .icono-principal{
+        margin-left: 0px;
+    }
+}
 
 .swal2-container.swal2-backdrop-show, 
 .swal2-container.swal2-noanimation{
