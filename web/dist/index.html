@@ -5,11 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="icon" type="image/png" href="/icono-pollito.af822530.svg">
+        <link rel="stylesheet" href="/fontello.15eb929f.css">
         <script>FontAwesomeConfig = {
   autoReplaceSvg: "nest"
 };</script>
         <title>IOT app</title>
-    <link rel="stylesheet" href="/src.e31bb0bc.css"></head>
+    <script src="/fontello.15eb929f.js"></script><link rel="stylesheet" href="/src.e31bb0bc.css"></head>
     <body>
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
             <div class="container-fluid icono-principal">
@@ -98,7 +99,83 @@
                 </div>
             
             </div>
+
+            <div class="row">
+                <div class="col-xl-4 col-lg-5">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                            <h6 class="m-0 font-weight-bold text-primary">On</h6>
+                        </div>
+                        <!-- Card Body -->
+                        <div class="card-body">
+                            <div class="chart-pie pt-4 pb-2" id="OnOFF">
+                                <div class="contenedor">
+                                    <input type="checkbox" id="toggle">
+                                    <label for="toggle" class="icon-power" id="boton-btn"></label>
+                                    
+                                </div>
+                            </div>
+                            <div class="mt-4 text-center small">
+                                <span class="mr-2">
+                                    <i class="fas fa-circle text-primary"></i> Apagado
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-5">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                            <h6 class="m-0 font-weight-bold text-primary">Temperatura</h6>
+                        </div>
+                        <!-- Card Body -->
+                        <div class="card-body">
+                            <div class="chart-pie pt-4 pb-2 cars-tols">
+                                <div id="chartdiv1"></div>
+                            </div>
+                            <div class="mt-4 text-center small">
+                                <span class="mr-2">
+                                    <i class="fas fa-circle text-primary"></i> °C
+                                </span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4 col-lg-5">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                            <h6 class="m-0 font-weight-bold text-primary">Humedad</h6>
+                        </div>
+                        <!-- Card Body -->
+                        <div class="card-body">
+                            <div class="chart-pie pt-4 pb-2 cars-tols">
+                                <div id="chartdiv"></div>
+                            </div>
+                            <div class="mt-4 text-center small">
+                                <span class="mr-2">
+                                    <i class="fas fa-circle text-primary"></i> % Humedad
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
         </div>
+
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright &copy; Chick Tools 2022</span>
+                </div>
+            </div>
+        </footer>
+
         
         <script src="/login.5087793e.js"></script>
         <script src="/src.e31bb0bc.js"></script>

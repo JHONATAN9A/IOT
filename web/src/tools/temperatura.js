@@ -1,6 +1,9 @@
 let API_KEY = "f46f03acb27b3baa4049079f073d975a"
 
 
+let username = 'universidaddecundinamarca_calderonrodriguez'
+let password = '9U1eG1eIyV'
+
 export let ApiTemperatura =(lat,long,div)=>{
     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${API_KEY}&units=metric`)
     .then(response => response.json())

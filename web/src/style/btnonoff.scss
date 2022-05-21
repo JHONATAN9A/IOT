@@ -1,0 +1,32 @@
+#toggle{
+    display: none;
+}
+
+#OnOFF{
+    margin: 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0 !important;
+}
+
+#boton-btn{
+   display: block;
+   width:200px;
+   height:200px; 
+   background:#ffff;
+   line-height: 200px;
+   text-align: center;
+   font-size: 70px;
+   border-radius:50%;
+   cursor: pointer;
+   box-shadow: 0 12px 30px rgba(0,0,0,0.7);
+        
+
+}
+
+#toggle:checked + #boton-btn{
+    background: #fff;
+    box-shadow: inset 0 12px 30px rgba(0,0,0,0.4);
+    color: #8eab0c
+}
