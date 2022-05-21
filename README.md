@@ -16,4 +16,4 @@ npm start
 ```
 
 #### Interfaz  de la aplicación. 
-![alt text](https://github.com/JHONATAN9A/IOT/web/src/img/App.png)
+![alt text](https://github.com/JHONATAN9A/IOT/blob/main/web/src/img/App.png?raw=true)
