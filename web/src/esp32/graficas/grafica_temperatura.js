@@ -80,15 +80,19 @@ export let generalGraficaTemperatura = ()=> {
         clockHand.hand.animate({ key: "fill", to: fill, duration: 500, easing: am5.ease.out(am5.ease.cubic) })
     });
 
+    var temperatura = 0;
     setInterval(function () {
-        var value = Get_Temperatura_API()
+        Get_Temperatura_API(retundata)
+        function retundata(data){
+            temperatura=data;
+        }
         axisDataItem.animate({
             key: "value",
-            to: value,
+            to: temperatura,
             duration: 500,
             easing: am5.ease.out(am5.ease.cubic)
         });
-    }, 2000)
+    }, 3000)
 
     chart.bulletsContainer.set("mask", undefined);
 

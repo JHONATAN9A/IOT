@@ -1,5 +1,3 @@
-import $ from "jquery";
-
 //Importar librerias externas
 import 'bootstrap';
 import '@fortawesome/fontawesome-free/css/all.css';

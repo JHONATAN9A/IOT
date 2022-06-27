@@ -102,27 +102,31 @@ export let generalGraficaHumedad = ()=> {
       });
 
     //Creamos la animación para la gráfica
+    let humedad = 0;
     setInterval(function () {
 
-        var value = Get_Humedad_API()
+        Get_Humedad_API(retundata)
+        function retundata(data){
+          humedad=data;
+        }
       
         axisDataItem.animate({
           key: "value",
-          to: value,
+          to: humedad,
           duration: 500,
           easing: am5.ease.out(am5.ease.cubic)
         });
       
         axisRange0.animate({
           key: "endValue",
-          to: value,
+          to: humedad,
           duration: 500,
           easing: am5.ease.out(am5.ease.cubic)
         });
       
         axisRange1.animate({
           key: "value",
-          to: value,
+          to: humedad,
           duration: 500,
           easing: am5.ease.out(am5.ease.cubic)
         });
