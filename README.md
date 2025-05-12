@@ -9,7 +9,6 @@ El sistema está compuesto por los siguientes elementos:
 - **Sensor DHT11**: Mide temperatura y humedad en tiempo real.
 - **ESP32**: Funciona como un servidor web local en la misma red, expone una API REST para el envío y consulta de datos.
 - **API REST (en la ESP32)**: Permite registrar los datos del sensor y controlar la bombilla mediante peticiones HTTP desde el dashboard web.
-- **Base de datos**: El dashboard puede almacenar los datos obtenidos de la ESP32 en una base de datos para su análisis histórico.
 - **Dashboard Web**: 
   - Consulta y visualiza los datos en tiempo real desde la ESP32.
   - Permite encender o apagar el sistema remotamente desde la interfaz.
@@ -22,10 +21,8 @@ El sistema está compuesto por los siguientes elementos:
 
 - ESP32 (Microcontrolador, servidor local con API REST)
 - Sensor DHT11 (Temperatura y Humedad)
-- HTML/CSS + JavaScript + React.js (Frontend/Dashboard)
-- Chart.js o similar (Visualización de datos)
-- MongoDB (opcional, para almacenamiento persistente)
-- Node.js + Express (opcional, si se quiere conectar a una API centralizada)
+- HTML/CSS + JavaScript (Frontend/Dashboard)
+- Chart.js (Visualización de datos)
 
 ## 🎯 Objetivo
 
