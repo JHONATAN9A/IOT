@@ -23,10 +23,8 @@ El sistema está compuesto por los siguientes elementos:
 
 - ESP32 (Microcontrolador)
 - Sensor DHT11 (Temperatura y Humedad)
-- Node.js + Express (Backend/API REST)
-- MongoDB (Base de Datos)
-- React.js (Frontend/Dashboard)
-- Chart.js o similar (Visualización de datos)
+- Python (Backend/API REST)
+- Chart.js (Visualización de datos)
 
 ## 🎯 Objetivo
 
