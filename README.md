@@ -7,24 +7,25 @@ Este proyecto tiene como objetivo aplicar tecnologías de Internet de las Cosas 
 El sistema está compuesto por los siguientes elementos:
 
 - **Sensor DHT11**: Mide temperatura y humedad en tiempo real.
-- **ESP32**: Recibe los datos del sensor y los transmite vía WiFi.
-- **API REST**: Los datos se envían a una base de datos a través de un servicio RESTful.
-- **Base de datos**: Almacena el histórico de temperaturas y estados del sistema.
+- **ESP32**: Funciona como un servidor web local en la misma red, expone una API REST para el envío y consulta de datos.
+- **API REST (en la ESP32)**: Permite registrar los datos del sensor y controlar la bombilla mediante peticiones HTTP desde el dashboard web.
+- **Base de datos**: El dashboard puede almacenar los datos obtenidos de la ESP32 en una base de datos para su análisis histórico.
 - **Dashboard Web**: 
-  - Visualiza gráficas con los datos registrados.
+  - Consulta y visualiza los datos en tiempo real desde la ESP32.
   - Permite encender o apagar el sistema remotamente desde la interfaz.
   - Controla manualmente la bombilla (actuador) desde el portal web.
+  - Grafica los datos registrados (en caso de estar conectada a una base de datos).
  
-## 🖼️ Interfaz de la Aplicación
-
 ![Interfaz Web](https://github.com/JHONATAN9A/IOT/blob/main/web/src/img/App.png?raw=true)
 
 ## 🧠 Tecnologías Utilizadas
 
-- ESP32 (Microcontrolador)
+- ESP32 (Microcontrolador, servidor local con API REST)
 - Sensor DHT11 (Temperatura y Humedad)
-- Python (Backend/API REST)
-- Chart.js (Visualización de datos)
+- HTML/CSS + JavaScript + React.js (Frontend/Dashboard)
+- Chart.js o similar (Visualización de datos)
+- MongoDB (opcional, para almacenamiento persistente)
+- Node.js + Express (opcional, si se quiere conectar a una API centralizada)
 
 ## 🎯 Objetivo
 
